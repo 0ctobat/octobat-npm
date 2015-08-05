@@ -1,0 +1,24 @@
+{
+  "name": "octobat",
+  "version": "1.0.0",
+  "description": "Wrapper for the Octobat api calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorge-d/octobat"
+  },
+  "keywords": [
+    "octobat",
+    "invoice",
+    "sass"
+  ],
+  "author": "Dimitri Jorge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorge-d/octobat/issues"
+  },
+  "homepage": "https://github.com/jorge-d/octobat"
+}
