@@ -2,9 +2,9 @@
   "name": "octobat",
   "version": "1.0.0",
   "description": "Wrapper for the Octobat api calls",
-  "main": "index.js",
+  "main": "lib/octobat.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/jorge-d/octobat/issues"
   },
-  "homepage": "https://github.com/jorge-d/octobat"
+  "homepage": "https://github.com/jorge-d/octobat",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "lodash": "^3.10.1",
+    "qs": "^4.0.0"
+  }
 }
