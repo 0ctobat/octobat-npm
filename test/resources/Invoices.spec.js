@@ -76,16 +76,22 @@ describe('Invoices Resource', function() {
   });
 
   describe('pay', function() {
-    it('Sends the correct request', function() {
-      var opts = { payment: {field_1: 'one', field_2: 'two'} };
-      octobat.invoices.pay('oc_in_424242', opts);
+    var opts = { payment: {field_1: 'one', field_2: 'two'} };
 
+    it('Sends the correct request', function() {
+      octobat.invoices.pay('oc_in_424242', opts);
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'PATCH',
         url: '/invoices/oc_in_424242/pay',
         headers: {},
         data: opts
       });
+    });
+
+    it('requires the customerId', function() {
+      expect(function(){
+        octobat.invoices.pay(null, opts);
+      }).to.throw(/invoiceId/);
     });
   });
 });
