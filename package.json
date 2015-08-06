@@ -1,6 +1,6 @@
 {
   "name": "octobat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper for the Octobat api calls",
   "main": "lib/octobat.js",
   "scripts": {
