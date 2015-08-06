@@ -9,7 +9,7 @@ require('chai').use(require('chai-as-promised'));
 var utils = module.exports = {
 
   getUserOctobatKey: function() {
-    var key = process.env.OCTOBAT_TEST_API_KEY || throw "env's OCTOBAT_TEST_API_KEY not set";
+    var key = process.env.OCTOBAT_TEST_API_KEY;
 
     return key;
   },

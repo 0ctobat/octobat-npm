@@ -21,7 +21,9 @@ describe('Octobat Module', function() {
 
   describe('authentication', function() {
     it('works when key is valid', function(done) {
-      octobat.customers.list({}, function(err, result) {
+      octobat.customers.list({limit: 1}, function(err, result) {
+        expect(result).to.be.an('object');
+        expect(result.data).to.have.length(1)
         done(err);
       });
     });
