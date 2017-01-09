@@ -8,20 +8,20 @@ var TEST_AUTH_KEY = 'aGN0bIwXnHdw5645VABjPdSn8nWY7G11';
 describe('Numbering Sequences Resource', function() {
   describe('list', function() {
     it('Sends the correct request', function() {
-      octobat.numberingSequences.list();
+      octobat.invoiceNumberingSequences.list();
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'GET',
-        url: '/numbering_sequences',
+        url: '/invoice_numbering_sequences',
         headers: {},
         data: {}
       });
     });
 
     it('Sends the correct request [with specified auth]', function() {
-      octobat.numberingSequences.list(TEST_AUTH_KEY);
+      octobat.invoiceNumberingSequences.list(TEST_AUTH_KEY);
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'GET',
-        url: '/numbering_sequences',
+        url: '/invoice_numbering_sequences',
         headers: {},
         data: {},
         auth: TEST_AUTH_KEY
@@ -34,10 +34,10 @@ describe('Numbering Sequences Resource', function() {
         starting_after: '1992-02-27'
       };
 
-      octobat.numberingSequences.list(opts);
+      octobat.invoiceNumberingSequences.list(opts);
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'GET',
-        url: '/numbering_sequences',
+        url: '/invoice_numbering_sequences',
         headers: {},
         data: opts
       });

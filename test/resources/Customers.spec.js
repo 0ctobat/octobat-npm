@@ -9,20 +9,21 @@ var TEST_AUTH_KEY = 'aGN0bIwXnHdw5645VABjPdSn8nWY7G11';
 describe('Customers Resource', function() {
   describe('retrieve', function() {
     it('Sends the correct request', function() {
-      octobat.customers.retrieve('oc_cu_1421878635hksc26e4de79');
+      octobat.customers.retrieve('oc_cu_1483066837eae131696bbb');
+      
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'GET',
-        url: '/customers/oc_cu_1421878635hksc26e4de79',
+        url: '/customers/oc_cu_1483066837eae131696bbb',
         headers: {},
         data: {}
       });
     });
 
     it('Sends the correct request [with specified auth]', function() {
-      octobat.customers.retrieve('oc_cu_1421878635hksc26e4de79', TEST_AUTH_KEY);
+      octobat.customers.retrieve('oc_cu_1483066837eae131696bbb', TEST_AUTH_KEY);
       expect(octobat.LAST_REQUEST).to.deep.equal({
         method: 'GET',
-        url: '/customers/oc_cu_1421878635hksc26e4de79',
+        url: '/customers/oc_cu_1483066837eae131696bbb',
         headers: {},
         data: {},
         auth: TEST_AUTH_KEY
@@ -71,15 +72,13 @@ describe('Customers Resource', function() {
   describe('update', function() {
     it('Sends the correct request', function() {
       var opts = {
-        name: 'Bleh',
-        billing_address_line1: '42 moon street',
-        vat_number: '0123456789'
+        billing_address_line2: 'Appt.183',
       }
 
-      octobat.customers.update('oc_cu_1421878635hksc26e4de79', opts);
+      octobat.customers.update('oc_cu_1483066837eae131696bbb', opts);
       expect(octobat.LAST_REQUEST).to.deep.equal({
-        method: 'POST',
-        url: '/customers/oc_cu_1421878635hksc26e4de79',
+        method: 'PATCH',
+        url: '/customers/oc_cu_1483066837eae131696bbb',
         headers: {},
         data: opts
       });
