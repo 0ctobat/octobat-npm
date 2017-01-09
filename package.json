@@ -1,5 +1,5 @@
 {
-  "name": "octobat",
+  "name": "octobat-npm",
   "version": "2.0.0",
   "description": "Wrapper for the Octobat v2 api calls",
   "main": "lib/octobat.js",
@@ -13,12 +13,15 @@
   "keywords": [
     "octobat",
     "invoice",
-    "sass"
+    "sass",
+    "tax",
+    "vat",
+    "vatmoss"
   ],
   "author": "Dimitri Jorge + Octobat team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/0ctobat/octobat/issues"
+    "url": "https://github.com/0ctobat/octobat-npm/issues"
   },
   "homepage": "https://github.com/0ctobat/octobat-npm",
   "devDependencies": {
